@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "farmer-reg";
+$database = "farmfreshfeast";
 
 try {
     $conn = new mysqli($servername, $username, $password, $database);
@@ -76,7 +76,7 @@ try {
         $stmt->bind_param("ssiss", $name, $email, $mobile, $username, $hashed_password);
 
         if ($stmt->execute()) {
-            echo "<script>alert('New record created successfully');</script>";
+            echo "<script>alert('New record created successfully'); window.location.href = 'farmerlog.php';</script>";
         } else {
             throw new Exception("Error executing SQL statement: " . $stmt->error);
         }

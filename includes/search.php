@@ -1,19 +1,13 @@
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
 .search_div{
     width:100%;
     height:10%;
-    background-color: #F2F1EB;
+    background-color: #f4f4f4;
     display:flex;
     justify-content: space-between;
     align-items: center;
     padding:15px 15%;
+    margin-top: 20px;
     
 }
 .icons{

@@ -57,8 +57,8 @@ try {
         }
 
         // Proceed with restaurant registration if all checks passed
-        $sql = "INSERT INTO restaurants (restaurant_name, owner_name, email, phone, image, address, password)
-                VALUES (?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO restaurants (restaurant_name, owner_name, email, phone, address, password)
+                VALUES (?, ?, ?, ?, ?, ?)";
 
         $stmt = $conn->prepare($sql);
         

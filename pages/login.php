@@ -40,13 +40,13 @@ if(isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../assets/style1.css">
     <title>User Login</title>
     <link rel="stylesheet" href="../assets/stylelogin.css">
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url("bg1.jpg"); /* Path to your background image */
+            background-image: url("./projectimages/bg2.jpg"); /* Path to your background image */
             background-size: cover;
             background-position: center;
             margin: 0;

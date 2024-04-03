@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
    require('../includes/connection.inc.php');
    require('../includes/functions.inc.php');
 ?>
@@ -144,4 +144,4 @@
     
     </script>
     </body>
-    </html>
+    </html> -->

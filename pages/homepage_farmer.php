@@ -137,18 +137,8 @@
     </style>
 </head>
 <body>
-    <header>
-        <img src="./projectimages/img1-removebg.png" alt="Logo">
-        <div class="nav_name">FarmFreshFeast.com</div>
-        <nav>
-            <ul class="nav_links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">Profile</a></li>
-            </ul>
-        </nav>
-    </header>
+<?php require('../includes/top.inc1.php');  ?>
+    
     <section>
         <div class="right_section">
             <h1>FarmFreshFeast.com</h1>

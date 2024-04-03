@@ -96,26 +96,6 @@ function showProduct()
     </div>
 </div>
 </div>
-   
-        /*
-    // Creating map options
-    var mapOptions = {
-    center: [19.9975, 73.7898],
-    zoom: 10
-    }
-    // Creating a map object
-    var map = new L.map('map', mapOptions);
-    // Creating a Layer object
-    var layer = new
-    L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-    // Adding layer to the map
-    map.addLayer(layer);
-    // Creating a marker
-    var marker = L.marker([19.9975, 73.7898]);
-    // Adding marker to the map
-    marker.addTo(map);
-    */
-
 <script>var mapOptions = {
 center: [19.9975, 73.7898],
 zoom: 10
@@ -134,6 +114,5 @@ marker.addTo(map);
 
 
     </script>
-// Creating map options
 
     <?php } }}}?>

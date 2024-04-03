@@ -5,7 +5,7 @@
 // Check if the user is logged in
 if (!isset($_SESSION['ADMIN_LOGIN']) || !$_SESSION['ADMIN_LOGIN']) {
     // Redirect to login page if not logged in
-    header('Location: ./login.php');
+    header('Location: ./farmerlog.php');
     exit();
 }
 ?>
@@ -14,7 +14,7 @@ if (!isset($_SESSION['ADMIN_LOGIN']) || !$_SESSION['ADMIN_LOGIN']) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../assets/style.css">
     <style>
         .personal_info{
@@ -70,14 +70,14 @@ if (!isset($_SESSION['ADMIN_LOGIN']) || !$_SESSION['ADMIN_LOGIN']) {
     <div class="personal_info">
         <div class="profile_pic">
             <img src="../assets/icons/ProfileIcon.png" alt="profile_icon" height="200rem">
-            <button class="red_btn btn" onclick="location.href='../includes/logout.php'" btn>Logout</button>
+            <button class="red_btn btn" onclick="location.href='./farmerlog.php'" btn>Logout</button>
         </div>
         
         <div class="profile_info">
             <table >
             <?php
-                $owner_name = isset($_SESSION['USER_NAME']) ? $_SESSION['USER_NAME'] : '';
-                $sql = "SELECT * FROM restaurants WHERE owner_name='$owner_name'";
+                $username = isset($_SESSION['USER_NAME']) ? $_SESSION['USER_NAME'] : '';
+                $sql = "SELECT * FROM users WHERE username='$username'";
                 $res = mysqli_query($con, $sql);
 
                 if (mysqli_num_rows($res) > 0) {
@@ -85,7 +85,7 @@ if (!isset($_SESSION['ADMIN_LOGIN']) || !$_SESSION['ADMIN_LOGIN']) {
                 ?>
                 <tr>
                     <td class="bold">Name:</td>
-                    <td><?php echo $row['owner_name']; ?></td>
+                    <td><?php echo $row['username']; ?></td>
                 </tr>
                 <tr>
                     <td class="bold">Email:</td>
@@ -93,15 +93,7 @@ if (!isset($_SESSION['ADMIN_LOGIN']) || !$_SESSION['ADMIN_LOGIN']) {
                 </tr>
                 <tr>
                     <td class="bold">Mobile NO:</td>
-                    <td><?php echo $row['phone']; ?></td>
-                </tr>
-                <tr>
-                    <td class="bold">Restaurant Name:</td>
-                    <td><?php echo $row['restaurant_name']; ?></td>
-                </tr>
-                <tr>
-                    <td class="bold">Address:</td>
-                    <td><?php echo $row['address']; ?></td>
+                    <td><?php echo $row['mobile']; ?></td>
                 </tr>
                 <?php } ?>
             </table>
@@ -109,7 +101,8 @@ if (!isset($_SESSION['ADMIN_LOGIN']) || !$_SESSION['ADMIN_LOGIN']) {
     </div>
 
     <?php
-            require('../includes/footer.inc.php');
+    require('./addProduct.php');
+    require('../includes/footer.inc.php');
         ?>
 </body>
 </html>

@@ -25,7 +25,7 @@ try {
             $row = $result->fetch_assoc();
             if (password_verify($password, $row['password'])) {
                 // Password is correct, redirect to dashboard or perform other actions
-                header("Location: dashboard.php"); // Change to your dashboard page
+                header("Location: ./homepage_restaurant.php"); // Change to your dashboard page
                 exit();
             } else {
                 echo "<script>alert('Incorrect password');</script>";

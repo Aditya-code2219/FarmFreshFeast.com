@@ -243,7 +243,7 @@
     <div class="products_page">
       <?php getProduct(); ?>
       </div>
-        <div class="restaurant-card">
+        <!-- <div class="restaurant-card">
             <img src="./projectimages/capcicum.jpg" alt="capcicum image">
             <div class="restaurant-info">
               <h2 class="restaurant-name">vegetable name</h2>
@@ -323,7 +323,7 @@
               <p class="restaurant-location">Price</p>
               <a href="#" class="btn">View</a>
             </div>
-        </div>
+        </div> -->
         
     </div>
      
