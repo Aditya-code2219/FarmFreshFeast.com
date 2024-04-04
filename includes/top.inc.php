@@ -105,8 +105,9 @@
         <nav>
             <ul class="nav_links">
                 <li><a href="../pages/homepage_restaurant.php">Home</a></li>
-                <li><a href="#">About us</a></li>
+                <li><a href="../pages/about_us.html">About us</a></li>
                 <li><a href="../pages/categories.php">Products</a></li>
+                <li><a href="../pages/myorders.php">My orders</a></li>
                 <li><a href="../pages/contactus.php">Contact us</a></li>
                 <li><a href="../pages/profile.php">Profile</a></li>
             </ul>

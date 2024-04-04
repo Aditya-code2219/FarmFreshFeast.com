@@ -18,13 +18,7 @@ try {
         $phone = $_POST['phone'];
         $address = $_POST['address'];
         $password = $_POST['password'];
-        //$image=$_FILES['image']['name'];
-        //$temp_image=$_FILES['image']['tmp_name'];
-       // if($image!="")
-    {
-        //move_uploaded_file($temp_image,"./img/$temp_image");
-       // move_uploaded_file($temp_image,"./user_images/$image");
-    }
+
         // Hash the password
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
@@ -69,7 +63,8 @@ try {
         $stmt->bind_param("ssssss", $restaurant_name, $owner_name, $email, $phone, $address, $hashed_password);
 
         if ($stmt->execute()) {
-            echo "<script>alert('New record created successfully'); window.location.href = 'login.php';</script>";
+            // Redirect to the next page after successful registration
+            header("Location: restaurant-log.html");
             exit();
         } else {
             throw new Exception("Error executing SQL statement: " . $stmt->error);

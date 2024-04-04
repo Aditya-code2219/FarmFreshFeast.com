@@ -136,12 +136,6 @@ hr{
 }
 
 </style>
-
-<div class="search_div">
-        <input type="text" id="search_bar" name="search_bar" style="width: 55%;" class="textBox" >
-        <button type="cart_button" style="width: 20%; " class="green_button"><img src="../assets/icons/cart.svg" class="icons"><span><?php cart_item(); ?> item(s)-$ <?php total_cart_items(); ?></span></button>
-        <button type="cart_button" style="width: 20%; " class="cream_button"><img src="../assets/icons/map_direction.svg" class="icons"><span> Search Location</span></button>
-    </div>
     <div>
        
         <ul class="category_list">

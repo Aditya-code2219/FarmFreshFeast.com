@@ -38,21 +38,32 @@ if (!isset($_SESSION['ADMIN_LOGIN']) || !$_SESSION['ADMIN_LOGIN']) {
             top: -30px;
 
         }
-        .btn{
-            width:200px;
+        .btn {
+            width: 200px;
             border-radius: 15px;
             border: 3px solid black;
-            padding:5px 10px;
-            font-size: large;
-            font-weight: 500;
-            margin-top:1rem;
+            height: 40px;
+            font-size: 1.2rem; /* Adjusted font size */
+            font-weight: bold; /* Applied bold font weight */
+            background-color: transparent; /* Transparent background */
+            color: black; /* Button text color */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition for background color */
+            margin-top: 1rem;
         }
-        .red_btn{
+
+        .btn:hover {
+            background-color: #f0f0f0; /* Light gray background on hover */
+        }
+
+        .red_btn {
             border-color: crimson;
         }
-        .red_btn:hover{
-            background-color:#FF7C8E;
+
+        .red_btn:hover {
+            background-color: #ff7c8e; /* Light red background on hover */
         }
+
         .edit_btn:hover{
             background-color:#DCDAF2;
         }
@@ -66,7 +77,7 @@ if (!isset($_SESSION['ADMIN_LOGIN']) || !$_SESSION['ADMIN_LOGIN']) {
     </style>
 </head>
 <body>
-    <?php require('../includes/top.inc.php');  ?>
+    <?php require('../includes/top.inc1.php');  ?>
     <div class="personal_info">
         <div class="profile_pic">
             <img src="../assets/icons/ProfileIcon.png" alt="profile_icon" height="200rem">

@@ -190,7 +190,7 @@
 
     <div class="container">
         <h1>Registration</h1>
-        <form action="submit_registration.php" method="POST">
+        <form action="submit_registration.php" method="POST" enctype="multipart/form-data">
             <label for="restaurant_name">Restaurant Name:</label>
             <input type="text" id="restaurant_name" name="restaurant_name" required>
 
@@ -203,18 +203,13 @@
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" required>
 
-            <!--<label for="image" class="file-upload-btn">Choose Profile Picture:</label>
-            <input type="file" id="image" name="image" accept="image/png, image/jpeg" class="file-upload-input" />
-            -->
-            <label for="address">Address:</label>
-            <textarea id="address" name="address" required></textarea>
+            <label for="address">Address</label>
+            <input type="text" name="address">
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
-
-
-            <input type="submit" value="Submit">
+            <input type="submit" value="submit">
         </form>
         <div class="login-link">
             Already registered? <a href="./restaurant-log.html">Login here</a>

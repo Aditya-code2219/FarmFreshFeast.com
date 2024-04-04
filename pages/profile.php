@@ -38,21 +38,32 @@ if (!isset($_SESSION['ADMIN_LOGIN']) || !$_SESSION['ADMIN_LOGIN']) {
             top: -30px;
 
         }
-        .btn{
-            width:200px;
+        .btn {
+            width: 200px;
             border-radius: 15px;
             border: 3px solid black;
-            padding:5px 10px;
-            font-size: large;
-            font-weight: 500;
-            margin-top:1rem;
+            height: 40px;
+            font-size: 1.2rem; /* Adjusted font size */
+            font-weight: bold; /* Applied bold font weight */
+            background-color: transparent; /* Transparent background */
+            color: black; /* Button text color */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Smooth transition for background color */
+            margin-top: 1rem;
         }
-        .red_btn{
+
+        .btn:hover {
+            background-color: #f0f0f0; /* Light gray background on hover */
+        }
+
+        .red_btn {
             border-color: crimson;
         }
-        .red_btn:hover{
-            background-color:#FF7C8E;
+
+        .red_btn:hover {
+            background-color: #ff7c8e; /* Light red background on hover */
         }
+
         .edit_btn:hover{
             background-color:#DCDAF2;
         }
@@ -80,36 +91,43 @@ if (!isset($_SESSION['ADMIN_LOGIN']) || !$_SESSION['ADMIN_LOGIN']) {
                 $sql = "SELECT * FROM restaurants WHERE owner_name='$owner_name'";
                 $res = mysqli_query($con, $sql);
 
-                if (mysqli_num_rows($res) > 0) {
+                if (!$res) {
+                    echo "Error: " . mysqli_error($con);
+                } elseif (mysqli_num_rows($res) > 0) {
                     $row = mysqli_fetch_assoc($res);
-                ?>
-                <tr>
-                    <td class="bold">Name:</td>
-                    <td><?php echo $row['owner_name']; ?></td>
-                </tr>
-                <tr>
-                    <td class="bold">Email:</td>
-                    <td><?php echo $row['email']; ?></td>
-                </tr>
-                <tr>
-                    <td class="bold">Mobile NO:</td>
-                    <td><?php echo $row['phone']; ?></td>
-                </tr>
-                <tr>
-                    <td class="bold">Restaurant Name:</td>
-                    <td><?php echo $row['restaurant_name']; ?></td>
-                </tr>
-                <tr>
-                    <td class="bold">Address:</td>
-                    <td><?php echo $row['address']; ?></td>
-                </tr>
-                <?php } ?>
+                    // Display fetched data
+                    ?>
+                    <tr>
+                        <td class="bold">Name:</td>
+                        <td><?php echo $row['restaurant_name']; ?></td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Email:</td>
+                        <td><?php echo $row['email']; ?></td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Mobile NO:</td>
+                        <td><?php echo $row['phone']; ?></td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Restaurant Name:</td>
+                        <td><?php echo $row['restaurant_name']; ?></td>
+                    </tr>
+                    <tr>
+                        <td class="bold">Address:</td>
+                        <td><?php echo $row['address']; ?></td>
+                    </tr>
+                    <?php
+                } else {
+                    echo "No records found.";
+                }
+            ?>
             </table>
         </div>
     </div>
 
     <?php
-            require('../includes/footer.inc.php');
-        ?>
+        require('../includes/footer.inc.php');
+    ?>
 </body>
 </html>

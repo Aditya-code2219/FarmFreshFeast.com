@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Fresh Fest</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #aef7a5;
+        }
+
+        .logo img {
+            width: 150px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px 0;
+            padding: 20px;
+        }
+
+        .left, .right {
+            flex: 1;
+            padding: 20px;
+        }
+
+        #home {
+            background-color: rgb(255, 255, 255);
+        }
+
+        #about {
+            background-color: rgb(255, 255, 255);
+        }
+
+        #sustainability {
+            background-color: rgb(255, 255, 255);
+        }
+
+        .blue {
+            background-color: rgb(255, 255, 255);
+            color: rgb(8, 8, 8);
+        }
+
+        .light-blue {
+            background-color: #ffffff;
+            color: black;
+        }
+
+        .team {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .member {
+            text-align: center;
+        }
+
+        .member img {
+            width: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .column {
+            text-align: center;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .column p {
+            padding: 10px;
+        }
+
+        /* Different colors for paragraphs */
+        .green {
+            color: green;
+        }
+
+        .purple {
+            color: purple;
+        }
+
+        .orange {
+            color: orange;
+        }
+
+        /* Design box for team members */
+        .team-member {
+            background-color: #ddeeff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Colors for team members */
+        .disha {
+            background-color: #ffd700; /* Gold */
+        }
+
+        .aditya {
+            background-color: #ffa07a; /* Light Salmon */
+        }
+
+        .asmitha {
+            background-color: #b8cee0; /* Light Sky Blue */
+        }
+
+        .aniket {
+            background-color: #98fb98; /* Pale Green */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="logo">
+            <img src="logo.png" alt="Farm Fresh Fest Logo">
+        </div>
+    </header>
+    <section id="home">
+        <div class="container">
+            <div class="left">
+                <img src="https://img.freepik.com/premium-vector/logo-farm-fresh_647881-670.jpg" height=290 alt="Farm Fresh Fest Image">
+            </div>
+            <div class="right">
+                <h2>Farm Fresh Fest Information</h2>
+                <p class="green">At FarmFreshFeast, we're passionate about bridging the gap between farmers and restaurants, empowering local food systems and fostering sustainable partnerships. Our platform serves as a digital marketplace, connecting farmers directly with restaurants, cutting out the middlemen, and ensuring fair and transparent transactions.</p>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <div class="left blue">
+                <p class="black">Our mission is to revolutionize the way food is sourced and distributed, creating a more sustainable and equitable food ecosystem. By facilitating direct connections between farmers and restaurants, we aim to empower local farmers, promote fresh and seasonal produce, and support community-driven agriculture.</p>
+            </div>
+            <div class="right">
+                <img src="https://img.freepik.com/premium-vector/illustration-black-white-rocket_74440-4415.jpg" height=250 alt="Rocket Image">
+            </div>
+        </div>
+    </section>
+
+    <section id="sustainability">
+        <div class="container">
+            <div class="column">
+                <img src="https://media.istockphoto.com/id/1085231020/vector/recycled.jpg?s=612x612&w=0&k=20&c=atmHRmlT1QPlf3h8jdQHxElYwAGwdCmNV6Y-hJUktLY=" alt="Festival Image 1" height=150 style="border-radius: 20px;">
+                <p class="orange">Sustainability: We are committed to promoting sustainable farming practices and reducing the carbon footprint of the food industry.</p>
+            </div>
+            <div class="column">
+                <img src="https://www.shutterstock.com/image-vector/approval-check-vector-icon-260nw-772897276.jpg" alt="Festival Image 2" height=150 style="border-radius: 10px;">
+                <p class="purple">Quality: We prioritize quality in everything we do, from the products on our platform to the relationships we foster between farmers and restaurants.</p>
+            </div>
+            <div class="column">
+                <img src="https://static.vecteezy.com/system/resources/previews/000/659/844/non_2x/community-logo-vector.jpg" alt="Festival Image 3" height=150 style="border-radius: 10px;">
+                <p class="green">Community: We value the power of community and strive to build strong relationships between farmers, restaurants, and consumers.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="team">
+        <div class="container team">
+            <div class="column">
+                <div class="team-member disha">
+                    <img src="https://a.storyblok.com/f/191576/1200x800/faa88c639f/round_profil_picture_before_.webp" height=130 alt="Team Member 2">
+                    <p>Disha Patil</p>
+                    <p>Quality Assurance</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="team-member aditya">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHX5_9IH2ZUjiNv66l0u9dq_Hki7wAu_g865136R5_123470JPwAZNfCyOOjO8zyGoeiw&usqp=CAU" height=130 alt="Team Member 3">
+                    <p>Aditya Nair</p>
+                    <p>Community Outreach</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="team-member asmitha">
+                    <img src="https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg" height=130 alt="Team Member 4">
+                    <p>Asmitha Michael</p>
+                    <p>Development Lead</p>
+                </div>
+            </div>
+            <div class="column">
+                <div class="team-member aniket">
+                    <img src="https://cdn.iconscout.com/icon/free/png-512/avatar-367-456319.png" height=130 alt="Team Member 5">
+                    <p>Aniket Nair</p>
+                    <p>Marketing Specialist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

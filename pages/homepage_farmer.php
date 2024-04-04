@@ -1,3 +1,5 @@
+<?php require('../includes/top.inc1.php');  
+require('../includes/connection.inc.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -137,7 +139,8 @@
     </style>
 </head>
 <body>
-<?php require('../includes/top.inc1.php');  ?>
+
+
     
     <section>
         <div class="right_section">
@@ -149,91 +152,41 @@
         </div>
     </section>
 
-    <!-- Cards -->
+     <!-- Cards -->
 
-    <h2 style="margin: 15px; font-size: 22px;">Restaurants Near you</h2>
+     <h2 style="margin: 15px; font-size: 22px;">Restaurants Near you</h2>
     <div class="restaurants">
-        <div class="restaurant-card">
-            <img src="./projectimages/restaurant.webp" alt="Restaurant Image">
-            <div class="restaurant-info">
-              <h2 class="restaurant-name">Restaurant Name</h2>
-              <p class="restaurant-description">Description of the restaurant goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p class="restaurant-location">Location: City, Country</p>
-              <a href="#" class="btn">View</a>
-            </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./projectimages/restaurant.webp" alt="Restaurant Image">
-            <div class="restaurant-info">
-              <h2 class="restaurant-name">Restaurant Name</h2>
-              <p class="restaurant-description">Description of the restaurant goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p class="restaurant-location">Location: City, Country</p>
-              <a href="#" class="btn">View</a>
-            </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./projectimages/restaurant.webp" alt="Restaurant Image">
-            <div class="restaurant-info">
-              <h2 class="restaurant-name">Restaurant Name</h2>
-              <p class="restaurant-description">Description of the restaurant goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p class="restaurant-location">Location: City, Country</p>
-              <a href="#" class="btn">View</a>
-            </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./projectimages/restaurant.webp" alt="Restaurant Image">
-            <div class="restaurant-info">
-              <h2 class="restaurant-name">Restaurant Name</h2>
-              <p class="restaurant-description">Description of the restaurant goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p class="restaurant-location">Location: City, Country</p>
-              <a href="#" class="btn">View</a>
-            </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./projectimages/restaurant.webp" alt="Restaurant Image">
-            <div class="restaurant-info">
-              <h2 class="restaurant-name">Restaurant Name</h2>
-              <p class="restaurant-description">Description of the restaurant goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p class="restaurant-location">Location: City, Country</p>
-              <a href="#" class="btn">View</a>
-            </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./projectimages/restaurant.webp" alt="Restaurant Image">
-            <div class="restaurant-info">
-              <h2 class="restaurant-name">Restaurant Name</h2>
-              <p class="restaurant-description">Description of the restaurant goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p class="restaurant-location">Location: City, Country</p>
-              <a href="#" class="btn">View</a>
-            </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./projectimages/restaurant.webp" alt="Restaurant Image">
-            <div class="restaurant-info">
-              <h2 class="restaurant-name">Restaurant Name</h2>
-              <p class="restaurant-description">Description of the restaurant goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p class="restaurant-location">Location: City, Country</p>
-              <a href="#" class="btn">View</a>
-            </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./projectimages/restaurant.webp" alt="Restaurant Image">
-            <div class="restaurant-info">
-              <h2 class="restaurant-name">Restaurant Name</h2>
-              <p class="restaurant-description">Description of the restaurant goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p class="restaurant-location">Location: City, Country</p>
-              <a href="#" class="btn">View</a>
-            </div>
-        </div>
-        <div class="restaurant-card">
-            <img src="./projectimages/restaurant.webp" alt="Restaurant Image">
-            <div class="restaurant-info">
-              <h2 class="restaurant-name">Restaurant Name</h2>
-              <p class="restaurant-description">Description of the restaurant goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <p class="restaurant-location">Location: City, Country</p>
-              <a href="#" class="btn">View</a>
-            </div>
-        </div>
+        <?php
+            // Fetch data from the database
+            $sql = "SELECT * FROM restaurants";
+            $result = mysqli_query($con, $sql);
+
+            // Check if there are any rows returned
+            if (mysqli_num_rows($result) > 0) {
+                // Loop through each row
+                while ($row = mysqli_fetch_assoc($result)) {
+                    // Generate HTML for each card dynamically using PHP
+                    ?>
+                    <div class="restaurant-card">
+                        <img src="./projectimages/restaurant.webp" alt="Restaurant Image">
+                        <div class="restaurant-info">
+                            <h2 class="restaurant-name"><?php echo $row['restaurant_name']; ?></h2>
+                            <p class="restaurant-description"><?php echo $row['phone']; ?></p>
+                            <p class="restaurant-location">Location: <?php echo $row['address']; ?></p>
+                            <!-- Add more details as needed -->
+                            <a href="#" class="btn">View</a>
+                        </div>
+                    </div>
+                    <?php
+                }
+            } else {
+                // If no rows found
+                echo "No restaurants found.";
+            }
+
+            // Close the database connection
+            mysqli_close($con);
+        ?>
     </div>
      
     <!-- footer -->

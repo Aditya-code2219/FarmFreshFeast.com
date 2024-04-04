@@ -101,7 +101,7 @@
             border:1px solid black;
         }
         input{
-            height:1.4rem;
+            height:2rem;
             font-size: 15px;
             width:100%;
             padding:5px 15px;
@@ -145,7 +145,7 @@
 
             <tr>
                 <td> <label for="image">Image</label></td>
-                <td>  <input type="file" id="image" name="image" accept="image/png, image/jpeg" /></td>
+                <td>  <input type="file" id="image" name="image" accept="image/png, image/jpeg" style="width: 200px;height:100px;"/></td>
             </tr>
 
             <tr>

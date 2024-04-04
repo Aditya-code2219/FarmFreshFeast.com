@@ -105,8 +105,8 @@
         <nav>
             <ul class="nav_links">
                 <li><a href="../pages/homepage_farmer.php">Home</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Restaurants</a></li>
+                <li><a href="../pages/about_us.html">About us</a></li>
+                <li><a href="../pages/categories_farmer.php">My products</a></li>
                 <li><a href="../pages/contactus1.php">Contact us</a></li>
                 <li><a href="../pages/profile1.php">Profile</a></li>
             </ul>
